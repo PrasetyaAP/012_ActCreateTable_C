@@ -24,9 +24,19 @@ namespace CreateTable
                 Console.WriteLine("Create Table Sukses!");
                 Console.ReadKey();
             }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error!!!" + e);
+                Console.ReadKey();
+            }
+            finally
+            {
+                con.Close();
+            }
         }
         static void Main(string[] args)
         {
+            new Program().CreateTable();
         }
     }
 }
